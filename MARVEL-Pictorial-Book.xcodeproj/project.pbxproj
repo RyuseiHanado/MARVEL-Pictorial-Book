@@ -18,6 +18,7 @@
 		1A3DA324289BC2BB00C8C252 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA323289BC2BB00C8C252 /* URLImage.swift */; };
 		1A3DA328289BCD9100C8C252 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA327289BCD9100C8C252 /* WebView.swift */; };
 		1A3DA32A289BE36800C8C252 /* AccessTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA329289BE36800C8C252 /* AccessTokens.swift */; };
+		1A3DA32E289BE8D000C8C252 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1A3DA32D289BE8D000C8C252 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		1A3DA323289BC2BB00C8C252 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		1A3DA327289BCD9100C8C252 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		1A3DA329289BE36800C8C252 /* AccessTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokens.swift; sourceTree = "<group>"; };
+		1A3DA32D289BE8D000C8C252 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 		1A3DA2FC289B302E00C8C252 = {
 			isa = PBXGroup;
 			children = (
+				1A3DA32D289BE8D000C8C252 /* .gitignore */,
 				1A3DA307289B302E00C8C252 /* MARVEL-Pictorial-Book */,
 				1A3DA306289B302E00C8C252 /* Products */,
 			);
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3DA310289B303000C8C252 /* Preview Assets.xcassets in Resources */,
+				1A3DA32E289BE8D000C8C252 /* .gitignore in Resources */,
 				1A3DA30D289B303000C8C252 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
