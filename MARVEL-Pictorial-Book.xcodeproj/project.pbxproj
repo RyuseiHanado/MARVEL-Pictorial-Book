@@ -11,6 +11,13 @@
 		1A3DA30B289B302E00C8C252 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA30A289B302E00C8C252 /* ContentView.swift */; };
 		1A3DA30D289B303000C8C252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A3DA30C289B303000C8C252 /* Assets.xcassets */; };
 		1A3DA310289B303000C8C252 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A3DA30F289B303000C8C252 /* Preview Assets.xcassets */; };
+		1A3DA31A289B309D00C8C252 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA319289B309D00C8C252 /* DetailView.swift */; };
+		1A3DA31E289B30D600C8C252 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA31D289B30D600C8C252 /* NetworkManager.swift */; };
+		1A3DA320289B30E600C8C252 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA31F289B30E600C8C252 /* PostData.swift */; };
+		1A3DA322289BC28900C8C252 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA321289BC28800C8C252 /* ImageDownloader.swift */; };
+		1A3DA324289BC2BB00C8C252 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA323289BC2BB00C8C252 /* URLImage.swift */; };
+		1A3DA328289BCD9100C8C252 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA327289BCD9100C8C252 /* WebView.swift */; };
+		1A3DA32A289BE36800C8C252 /* AccessTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA329289BE36800C8C252 /* AccessTokens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		1A3DA30A289B302E00C8C252 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A3DA30C289B303000C8C252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A3DA30F289B303000C8C252 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A3DA319289B309D00C8C252 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		1A3DA31D289B30D600C8C252 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1A3DA31F289B30E600C8C252 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		1A3DA321289BC28800C8C252 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		1A3DA323289BC2BB00C8C252 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		1A3DA327289BCD9100C8C252 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		1A3DA329289BE36800C8C252 /* AccessTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +66,11 @@
 			isa = PBXGroup;
 			children = (
 				1A3DA308289B302E00C8C252 /* MARVEL_Pictorial_BookApp.swift */,
-				1A3DA30A289B302E00C8C252 /* ContentView.swift */,
+				1A3DA31B289B30A900C8C252 /* Models */,
+				1A3DA316289B303F00C8C252 /* Views */,
 				1A3DA30C289B303000C8C252 /* Assets.xcassets */,
 				1A3DA30E289B303000C8C252 /* Preview Content */,
+				1A3DA329289BE36800C8C252 /* AccessTokens.swift */,
 			);
 			path = "MARVEL-Pictorial-Book";
 			sourceTree = "<group>";
@@ -65,6 +81,27 @@
 				1A3DA30F289B303000C8C252 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1A3DA316289B303F00C8C252 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A3DA30A289B302E00C8C252 /* ContentView.swift */,
+				1A3DA319289B309D00C8C252 /* DetailView.swift */,
+				1A3DA323289BC2BB00C8C252 /* URLImage.swift */,
+				1A3DA327289BCD9100C8C252 /* WebView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A3DA31B289B30A900C8C252 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A3DA31D289B30D600C8C252 /* NetworkManager.swift */,
+				1A3DA31F289B30E600C8C252 /* PostData.swift */,
+				1A3DA321289BC28800C8C252 /* ImageDownloader.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +174,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A3DA324289BC2BB00C8C252 /* URLImage.swift in Sources */,
+				1A3DA328289BCD9100C8C252 /* WebView.swift in Sources */,
+				1A3DA320289B30E600C8C252 /* PostData.swift in Sources */,
+				1A3DA31E289B30D600C8C252 /* NetworkManager.swift in Sources */,
 				1A3DA30B289B302E00C8C252 /* ContentView.swift in Sources */,
+				1A3DA31A289B309D00C8C252 /* DetailView.swift in Sources */,
+				1A3DA322289BC28900C8C252 /* ImageDownloader.swift in Sources */,
+				1A3DA32A289BE36800C8C252 /* AccessTokens.swift in Sources */,
 				1A3DA309289B302E00C8C252 /* MARVEL_Pictorial_BookApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MARVEL-Pictorial-Book/Preview Content\"";
+				DEVELOPMENT_TEAM = B82H7GW29K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,6 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MARVEL-Pictorial-Book/Preview Content\"";
+				DEVELOPMENT_TEAM = B82H7GW29K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
