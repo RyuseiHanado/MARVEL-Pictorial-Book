@@ -14,6 +14,33 @@ struct ContentView: View {
     // NetworkManagerクラスでObservableObjectを継承しているため、NetworkManagerを監視対象にできる
     // networkManagerが更新される度に、通知される
     @ObservedObject var networkManager = NetworkManager()
+    @ObservedObject var musicplayer = SoundPlayer()   // インスタンス化
+    
+    // 検索機能、入力テキストを保持
+    @ObservedObject var model =  Model()
+    
+    // 検索機能
+    // .searchable には、isSearching とdismissSearch という 2 つの環境値があります。
+    // 下記2つは任意で追加 Cancel処理で必要
+    @Environment(\.isSearching) private var isSearching: Bool
+//    @Environment(\.dismissSearch) private var dismissSearch
+    
+    init() {
+        // NavigationBarデザイン
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(red: 0.93, green: 0.11, blue: 0.14, alpha: 1.00)
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        // リストデザイン
+        UITableView.appearance().backgroundColor = UIColor.clear
+        UITableViewCell.appearance().backgroundColor = .clear
+        //検索バーデザイン
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .white
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .black
+    }
     
     var body: some View {
         // NavigationView
@@ -30,21 +57,86 @@ struct ContentView: View {
                 //第一引数destination: 行き先を指定する
                 NavigationLink(destination: DetailView(url: post.urls[0].url)) {
                     HStack {
-                        Text(post.name)
+                        Text(post.name).font(.title)
+                            .foregroundColor(.black)
+                        Spacer()
                         URLImage(url: post.thumbnail.path + "." + post.thumbnail.extension)
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 50, height: 50, alignment: .center)
+                            .frame(width: 100, height: 100, alignment: .center)
                     }
                 }
-                
-                .navigationTitle("MARVEL PB")
+                // List背景色
+                .listRowBackground(Color(red: 0.95, green: 0.95, blue: 0.95, opacity: 0.8))
+//                                .navigationBarTitleDisplayMode(.inline)
             }
+            // NavigationBarとの重なりを防止
+//            .padding(.top, 1)
+            // 背景画像設定
+            .background(
+                Image("marvelcomic-wallpapers-mono")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .edgesIgnoringSafeArea(.all)
+            )
+            .navigationTitle("MARVEL PB")
+            // navigationBarにオブジェクトを追加
+            .navigationBarItems(trailing:
+                                    // ボタン
+                                Button(action:{
+                // 音を再生
+                musicplayer.musicPlayer()
+            })
+                                {
+                // 再生状況に応じてアイコンを可変
+                if musicplayer.isPlaying {
+                    Image(systemName:"pause.circle")
+                        .foregroundColor(.white)
+                } else {
+                    Image(systemName:"play.circle")
+                        .foregroundColor(.white)
+                }
+                
+            }
+            )
+            //検索ボックス
+            .searchable(
+                text: $model.searchText,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: Text("Search characters")
+            )
+            .onSubmit(of: .search) {
+                // データ取得
+                self.networkManager.fetchData(model.searchText)
+            }
+            // .Searche
+            .onChange(of: model.searchText) { value in
+                print("On Changed!!")
+                // Cancel押した瞬間、入力テキストはリセットされるのかな。現状あきらめ
+                // Cancel時の処理
+                if model.searchText.isEmpty && !isSearching {
+                    //Search cancelled here
+                    print("Canceled!!")
+                }
+            }
+            
             // onAppear
             // UIKit のviewDidLoatと同じ働き
             .onAppear {
+                print("onAppear!!!!")
                 // データ取得
-                self.networkManager.fetchData()
+                self.networkManager.fetchData(model.searchText)
             }
         }
     }
+}
+
+class Model: ObservableObject {
+    
+    @Published var searchText = ""
+    @Published var familyNames: [String] = []
+    
+    func testMethod() {
+        print("searched!!")
+    }
+    
 }

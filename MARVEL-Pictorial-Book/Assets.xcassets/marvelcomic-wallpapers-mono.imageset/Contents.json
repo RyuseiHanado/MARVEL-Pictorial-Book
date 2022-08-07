@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "marvelcomic-wallpapers-mono.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "marvelcomic-wallpapers-mono@2x.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "marvelcomic-wallpapers-mono@3x.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

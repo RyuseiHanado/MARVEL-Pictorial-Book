@@ -25,7 +25,9 @@ class NetworkManager: ObservableObject {
         return digest.map { String(format: "%02x", $0) }.joined(separator: "")
     }
     
-    func fetchData() {
+    // APIデータ取得メソッド
+    func fetchData(_ searchText: String = "") {
+        print("data fetching!!")
         
         // UnixTime
         let unixtime: String = String(Date().timeIntervalSince1970)
@@ -37,8 +39,14 @@ class NetworkManager: ObservableObject {
         // データ作成
         let setData = "ts=" + unixtime + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
         
+        // 検索テキストが存在するか判定
+        let requestURL = searchText == "" ? "https://gateway.marvel.com:443/v1/public/characters?limit=100&" :
+        "https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=" + searchText + "&limit=100&"
+        
+        print("requestURL: \(requestURL)")
+        
         // 文字列からURLを生成できるか判定
-        if let url = URL(string: "https://gateway.marvel.com:443/v1/public/characters?limit=100&" + setData) {
+        if let url = URL(string: requestURL + setData) {
             // default構成を使用し、セッションを生成
             let session = URLSession(configuration: .default)
             // session.taskのみ設定するタスクを作成

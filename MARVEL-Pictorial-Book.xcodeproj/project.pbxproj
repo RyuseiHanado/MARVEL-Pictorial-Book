@@ -19,6 +19,7 @@
 		1A3DA328289BCD9100C8C252 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA327289BCD9100C8C252 /* WebView.swift */; };
 		1A3DA32A289BE36800C8C252 /* AccessTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA329289BE36800C8C252 /* AccessTokens.swift */; };
 		1A3DA32E289BE8D000C8C252 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1A3DA32D289BE8D000C8C252 /* .gitignore */; };
+		1A787485289CC85A00E475B6 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A787484289CC85A00E475B6 /* SoundPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		1A3DA327289BCD9100C8C252 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		1A3DA329289BE36800C8C252 /* AccessTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokens.swift; sourceTree = "<group>"; };
 		1A3DA32D289BE8D000C8C252 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1A787484289CC85A00E475B6 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				1A3DA308289B302E00C8C252 /* MARVEL_Pictorial_BookApp.swift */,
 				1A3DA31B289B30A900C8C252 /* Models */,
 				1A3DA316289B303F00C8C252 /* Views */,
+				1A787483289CC83500E475B6 /* Controller */,
 				1A3DA30C289B303000C8C252 /* Assets.xcassets */,
 				1A3DA30E289B303000C8C252 /* Preview Content */,
 				1A3DA329289BE36800C8C252 /* AccessTokens.swift */,
@@ -105,6 +108,14 @@
 				1A3DA321289BC28800C8C252 /* ImageDownloader.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1A787483289CC83500E475B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A787484289CC85A00E475B6 /* SoundPlayer.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A787485289CC85A00E475B6 /* SoundPlayer.swift in Sources */,
 				1A3DA324289BC2BB00C8C252 /* URLImage.swift in Sources */,
 				1A3DA328289BCD9100C8C252 /* WebView.swift in Sources */,
 				1A3DA320289B30E600C8C252 /* PostData.swift in Sources */,
