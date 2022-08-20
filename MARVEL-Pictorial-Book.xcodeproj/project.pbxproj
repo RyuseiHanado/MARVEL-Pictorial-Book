@@ -17,9 +17,9 @@
 		1A3DA322289BC28900C8C252 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA321289BC28800C8C252 /* ImageDownloader.swift */; };
 		1A3DA324289BC2BB00C8C252 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA323289BC2BB00C8C252 /* URLImage.swift */; };
 		1A3DA328289BCD9100C8C252 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA327289BCD9100C8C252 /* WebView.swift */; };
-		1A3DA32A289BE36800C8C252 /* AccessTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3DA329289BE36800C8C252 /* AccessTokens.swift */; };
 		1A3DA32E289BE8D000C8C252 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1A3DA32D289BE8D000C8C252 /* .gitignore */; };
 		1A787485289CC85A00E475B6 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A787484289CC85A00E475B6 /* SoundPlayer.swift */; };
+		1AAFA53328B0C92200AA830B /* AccessTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFA53228B0C92200AA830B /* AccessTokens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +34,9 @@
 		1A3DA321289BC28800C8C252 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		1A3DA323289BC2BB00C8C252 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		1A3DA327289BCD9100C8C252 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		1A3DA329289BE36800C8C252 /* AccessTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokens.swift; sourceTree = "<group>"; };
 		1A3DA32D289BE8D000C8C252 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		1A787484289CC85A00E475B6 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		1AAFA53228B0C92200AA830B /* AccessTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,6 @@
 				1A787483289CC83500E475B6 /* Controller */,
 				1A3DA30C289B303000C8C252 /* Assets.xcassets */,
 				1A3DA30E289B303000C8C252 /* Preview Content */,
-				1A3DA329289BE36800C8C252 /* AccessTokens.swift */,
 			);
 			path = "MARVEL-Pictorial-Book";
 			sourceTree = "<group>";
@@ -84,6 +83,7 @@
 		1A3DA30E289B303000C8C252 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				1AAFA53228B0C92200AA830B /* AccessTokens.swift */,
 				1A3DA30F289B303000C8C252 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -192,12 +192,12 @@
 				1A787485289CC85A00E475B6 /* SoundPlayer.swift in Sources */,
 				1A3DA324289BC2BB00C8C252 /* URLImage.swift in Sources */,
 				1A3DA328289BCD9100C8C252 /* WebView.swift in Sources */,
+				1AAFA53328B0C92200AA830B /* AccessTokens.swift in Sources */,
 				1A3DA320289B30E600C8C252 /* PostData.swift in Sources */,
 				1A3DA31E289B30D600C8C252 /* NetworkManager.swift in Sources */,
 				1A3DA30B289B302E00C8C252 /* ContentView.swift in Sources */,
 				1A3DA31A289B309D00C8C252 /* DetailView.swift in Sources */,
 				1A3DA322289BC28900C8C252 /* ImageDownloader.swift in Sources */,
-				1A3DA32A289BE36800C8C252 /* AccessTokens.swift in Sources */,
 				1A3DA309289B302E00C8C252 /* MARVEL_Pictorial_BookApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
