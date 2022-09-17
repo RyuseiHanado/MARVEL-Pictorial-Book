@@ -34,12 +34,25 @@ struct ContentView: View {
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
+
         // リストデザイン
         UITableView.appearance().backgroundColor = UIColor.clear
         UITableViewCell.appearance().backgroundColor = .clear
-        //検索バーデザイン
+        //検索バー背景色
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .white
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .black
+        // Cancelボタン色
+        UIView.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .white
+        // カーソル色
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .blue
+        // プレースホルダー色
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = NSAttributedString(string: "test", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        // 虫眼鏡アイコン色
+        let image = UIImage(systemName: "magnifyingglass")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        UISearchBar.appearance().setImage(image, for: .search, state: .normal)
+        // Clearボタン（x）色
+        let imgClear = UIImage(systemName: "xmark")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        UISearchBar.appearance().setImage(imgClear, for: .clear, state: .normal)
+        
     }
     
     var body: some View {
@@ -78,6 +91,8 @@ struct ContentView: View {
                     .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
             )
+            // iOS16から背景画像の表示で、下記のコードが必要
+            .scrollContentBackground(.hidden)
             .navigationTitle("MARVEL PB")
             // navigationBarにオブジェクトを追加
             .navigationBarItems(trailing:
@@ -116,8 +131,15 @@ struct ContentView: View {
                 if model.searchText.isEmpty && !isSearching {
                     //Search cancelled here
                     print("Canceled!!")
+                    // データ取得
+                    self.networkManager.fetchData(model.searchText)
                 }
             }
+            // 入力文字色
+            .foregroundColor(.black)
+            
+            
+            
             
             // onAppear
             // UIKit のviewDidLoatと同じ働き
@@ -127,6 +149,8 @@ struct ContentView: View {
                 self.networkManager.fetchData(model.searchText)
             }
         }
+        // 戻るボタンの色
+        .accentColor(.white)
     }
 }
 
